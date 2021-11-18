@@ -4,3 +4,5 @@ titlehtml <- html_nodes(larecherche, ".col-xs-8 a span")
 titletext <-html_text(titlehtml)
 pricehtml<-html_nodes(larecherche, ".item-price .price")
 pricetext<-html_text(pricehtml)
+
+print('a line added in ivim)
