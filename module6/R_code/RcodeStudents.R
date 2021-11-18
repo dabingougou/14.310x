@@ -18,3 +18,5 @@ ll <- thetahat/(0.95^(1/n)*(n+1)/n)
 ul <- thetahat/(0.05^(1/n)*(n+1)/n)
 thetain <- (theta>=ll & theta<=ul)
 mean(thetain)
+
+print('add a line in ivim via Working Copy')
