@@ -1,0 +1,27 @@
+{
+    "id": "50B77104",
+    "path": "~/OneDrive/GitHub/Metrics/MIT_course/module2/R_code/abebooks_clean.R",
+    "project_path": "abebooks_clean.R",
+    "type": "r_source",
+    "hash": "443223309",
+    "contents": "",
+    "dirty": false,
+    "created": 1634395487958.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "11,0",
+        "scrollLine": "0",
+        "marks": "<:11,0\n>:14,25"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1634372634,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1634372634,
+    "read_only": false,
+    "read_only_alternatives": []
+}
