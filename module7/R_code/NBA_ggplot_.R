@@ -101,4 +101,5 @@ ggsave("stevecurry2d.pdf")
 # Nov 21, 17:41
 
 
+print("aug a line on Nov 21 afternoon at Starbucks")
 

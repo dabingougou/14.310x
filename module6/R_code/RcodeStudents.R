@@ -18,3 +18,6 @@ ll <- thetahat/(0.95^(1/n)*(n+1)/n)
 ul <- thetahat/(0.05^(1/n)*(n+1)/n)
 thetain <- (theta>=ll & theta<=ul)
 mean(thetain)
+
+print('some text for git')
+print('add a line using Rstudio cloud, Nov 21 17:36')
