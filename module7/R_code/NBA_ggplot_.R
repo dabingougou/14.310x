@@ -98,5 +98,7 @@ SC2 <- ggplot(sc, aes(distance_from_midline_feet,distance_from_baseline_feet))+
 plot_grid(SC1, SC2, ncol = 1)
 ggsave("stevecurry2d.pdf")
 
+# Nov 21, 17:41
+
 
 
