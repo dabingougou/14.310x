@@ -99,4 +99,5 @@ plot_grid(SC1, SC2, ncol = 1)
 ggsave("stevecurry2d.pdf")
 
 
+print("aug a line on Nov 21 afternoon at Starbucks")
 
