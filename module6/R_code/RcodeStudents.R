@@ -20,3 +20,4 @@ thetain <- (theta>=ll & theta<=ul)
 mean(thetain)
 
 print('some text for git')
+print('add a line using Rstudio cloud')
