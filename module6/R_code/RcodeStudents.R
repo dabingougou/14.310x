@@ -20,4 +20,4 @@ thetain <- (theta>=ll & theta<=ul)
 mean(thetain)
 
 print('some text for git')
-print('add a line using Rstudio cloud, Nov 21 17:32')
+print('add a line using Rstudio cloud, Nov 21 17:36')
