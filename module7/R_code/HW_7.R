@@ -4,25 +4,32 @@
 #install.packages('perm')
 library(perm)
 rm(list = ls())
-setwd("")
+# setwd("")
 
 # Questions 1 - 4
 #-------------------------------------------------
-perms <- chooseMatrix(XXX,XXX)
+perms <- chooseMatrix(8,4)
 A <- matrix(c(0.462, 0.731, 0.571, 0.923, 0.333, 0.750, 0.893, 0.692), nrow=8, ncol=1, byrow=TRUE)
-treatment_avg <- (1/4)*perms%*%XXX
-control_avg <- (1/4)*(1-perms)%*%XXX
+treatment_avg <- (1/4)*perms %*% A
+control_avg <- (1/4)*(1-perms) %*% A
 test_statistic <- abs(treatment_avg-control_avg)
+#HC added block begin
+apply(perms, MARGIN = 1, FUN = function(x) (x == c(0, 1, 0, 0, 0, 1, 1, 1)))
+apply(apply(perms, MARGIN = 1, FUN = function(x) (x == c(0, 1, 0, 0, 0, 1, 1, 1))), MARGIN = 2, sum)
+
+#HC added block end
 rownumber <- apply(apply(perms, 1, 
                          function(x) (x == c(0, 1, 0, 0, 0, 1, 1, 1))), 
                    2, sum)
 rownumber <- (rownumber == 8)
 observed_test <- test_statistic[rownumber == TRUE]
 
-larger_than_observed <- (test_statistic >= XXX)
+larger_than_observed <- (test_statistic >= observed_test)
 #numbers in which the statistic exceeds or is equal to the value in the observed date
 sum(larger_than_observed)
 
+fisher_p = sum(larger_than_observed) / choose(8, 4)
+fisher_p
 df <- data.frame(perms,control_avg,treatment_avg,test_statistic)
 
 # Question 5 - 6
