@@ -23,11 +23,11 @@ ggplot(sc_shot_made, aes(shot_distance))+
   xlab("Distance to basket for shot made, CDF")+
   ylab("")
 ggsave("Comparisonbetweenplayers.pdf")
-
 # alternatively we can first append the three data sets, and then plot
 
-threeplayers<-bind_rows(list( "Stephen Curry"=sc, "Lebron James"=lj, "Kevin Durrant"=kd) , .id="player")
-threeplayers_shots_made <- filter(threeplayers, shot_made==1)
+three_players<-bind_rows(list( "Stephen Curry"=sc, "Lebron James"=lj, "Kevin Durrant"=kd) , .id="player")
+three_players_shots_made <- filter(three_players, shot_made==1)
+# rm(threeplayers, threeplayers_shots_made)
 
 ggplot(three_players_shots_made, aes(shot_distance, colour=player))+
   geom_freqpoly()
