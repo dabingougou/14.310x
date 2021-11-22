@@ -40,15 +40,15 @@ ggplot(three_players_shots_made, aes(shot_distance, colour=player))+
   geom_density(kernel="gaussian")
 
 
-ggplot(threeplayers_shots_made, aes(shot_distance, colour=player))+
-  stat_ecdf()+
+ggplot(three_players_shots_made, aes(shot_distance, colour=player))+
+  stat_ecdf() +
   xlab("Distance to basket for shot made, CDF")+
   ylab("")
 ggsave("Comparisonbetweenplayers_onedataset.pdf")
 
 
 # The combined data set also allows to do a comparative boxplot
-ggplot(threeplayers_shots_made)+
+ggplot(three_players_shots_made)+
   geom_boxplot(
     mapping=aes( 
       x = reorder(player, shot_distance, FUN = median),
@@ -73,7 +73,7 @@ ggplot(threeplayers_shots_made)+
   
   
   # now I run the test
-   ks.test(sc_distance_made,lj_distance_made)
+  ks.test(sc_distance_made,lj_distance_made)
   ks.test(sc_distance_made,kd_distance_made)
   
   # is steve curry distribution a normal?
