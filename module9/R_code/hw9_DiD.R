@@ -27,3 +27,5 @@ el_data <- el_data %>%
 table(el_data$incum)
 freq <- 9950 / (14987 + 9950)
 DCdensity(el_data$difshare, cutpoint=0, ext.out=T)
+rd_model1 <- RDestimate(data=el_data, formula=myoutcomenext ~ difshare)
+summary(rd_model1)
